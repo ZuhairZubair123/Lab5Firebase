@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             editTextName.setText("");
             Toast.makeText(this, "Product added", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "P;ease enter a name", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
         }
 
     }
