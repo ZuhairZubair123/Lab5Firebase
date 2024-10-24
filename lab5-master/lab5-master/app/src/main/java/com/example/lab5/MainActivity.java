@@ -25,9 +25,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText editTextName;
@@ -82,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     products.add(product);
                 }
                 ProductList productsAdapter = new ProductList(MainActivity.this, products);
-
+                listViewProducts.setAdapter(productsAdapter);
             }
 
             @Override
@@ -151,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             Product product = new Product(id,name,price);
             databaseProducts.child(id).setValue(product);
             editTextName.setText("");
-            editTextName.setText("");
+            editTextPrice.setText("");
             Toast.makeText(this, "Product added", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
